@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [my-event]
   push:
-    branches: [ main ]  
+    branches: [ master ]  
 jobs:
   myEvent:
     runs-on: ubuntu-latest
