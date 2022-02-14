@@ -58,5 +58,4 @@ jobs:
         with:
           push: true
           tags: shubham1998rathoor/private-repository:latest
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.REPO_ACCESS_TOKEN }}
+    
