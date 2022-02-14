@@ -54,4 +54,12 @@ jobs:
         name: Docker push
         run: |
           docker push shubham1998rathoor/actions-maven
-    
+  run:
+    runs-on: ubuntu-latest
+    needs: [build, docker]
+
+    steps:
+    - name: Run container
+      run: |
+        docker run shubham1998rathoor/actions-maven
+     
