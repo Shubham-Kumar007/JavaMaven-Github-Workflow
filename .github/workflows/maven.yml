@@ -59,6 +59,11 @@ jobs:
     needs: [build, docker]
     steps:
       -
+        uses: actions/download-artifact@v2
+        with:
+          name: maven-artifact
+          path: ${{ github.workspace }}/target/maven-tomcat.jar
+      -
         name: Pull image
         run: |
           docker pull shubham1998rathoor/actions-maven
