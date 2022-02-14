@@ -59,9 +59,6 @@ jobs:
     needs: [build, docker]
     steps:
       -
-        name: Checkout
-        uses: actions/checkout@v2
-      -
         name: Pull image
         run: |
           docker pull shubham1998rathoor/actions-maven
