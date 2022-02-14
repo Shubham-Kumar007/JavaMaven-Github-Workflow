@@ -58,6 +58,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build, docker]
     steps:
+      - name: Pull image
+        run: |
+          docker pull shubham1998rathoor/actions-maven
       - name: Run container
         run: |
           docker run shubham1998rathoor/actions-maven
