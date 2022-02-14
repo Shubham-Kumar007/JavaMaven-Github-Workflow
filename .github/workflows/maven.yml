@@ -26,9 +26,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1
+       - 
+        name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: Shubham-T-Kumar/java-maven-repo
-          event-type: my-event    
+         image: shubham1998rathoor/private-repository
+         registry: docker.io
+         username: ${{ secrets.DOCKERHUB_USERNAME }}
+         password: ${{ secrets.DOCKERHUB_PASSWORD }}
