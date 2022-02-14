@@ -22,6 +22,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Use the Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v2
+      with: 
+          name: maven-artifact
+          path: /target/maven-tomcat.jar
   docker:
     needs: build
     runs-on: ubuntu-latest
