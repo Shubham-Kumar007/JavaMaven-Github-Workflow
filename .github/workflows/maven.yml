@@ -66,5 +66,5 @@ jobs:
         with:
             image: shubham1998rathoor/actions-maven:latest
             run: |
-                  docker run shubham1998rathoor/actions-maven
+                  docker run shubham1998rathoor/actions-maven:latest
      
