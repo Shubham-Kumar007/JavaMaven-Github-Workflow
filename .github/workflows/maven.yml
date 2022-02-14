@@ -61,15 +61,10 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-        
-      -
-        uses: actions/download-artifact@v2
-        with:
-          name: maven-artifact
-          path: ${{ github.workspace }}/target/maven-tomcat.jar
 
       - uses: addnab/docker-run-action@v3
         with:
             image: shubham1998rathoor/actions-maven:latest
-            run: echo "hello world"    
+            run: |
+                  docker run shubham1998rathoor/actions-maven
      
