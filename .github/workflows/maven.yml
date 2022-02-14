@@ -58,10 +58,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build, docker]
     steps:
-      - name: Pull image
+      -
+        uses: actions/download-artifact@v2
+        with:
+          name: maven-artifact
+          path: ${{ github.workspace }}/target/maven-tomcat.jar
+      - 
+        name: Pull image
         run: |
           docker pull shubham1998rathoor/actions-maven
       - name: Run container
         run: |
-          docker run shubham1998rathoor/actions-maven:latest
+          docker run shubham1998rathoor/actions-maven
      
