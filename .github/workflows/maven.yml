@@ -56,7 +56,7 @@ jobs:
           docker push shubham1998rathoor/actions-maven
   run:
     runs-on: ubuntu-latest
-    needs: [build, docker]
+    needs: docker
     steps:
       -
         uses: actions/download-artifact@v2
