@@ -24,6 +24,5 @@ jobs:
     
         with:
          image: shubham1998rathoor/private-repository
-         tags: v1, latest
          registry: docker.io
           
