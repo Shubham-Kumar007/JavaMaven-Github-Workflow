@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with: 
           name: maven-artifact
-          path: /target/maven-tomcat.jar
+          path: /java-maven-repo/java-maven-repo/target/maven-tomcat.jar
   docker:
     needs: build
     runs-on: ubuntu-latest
