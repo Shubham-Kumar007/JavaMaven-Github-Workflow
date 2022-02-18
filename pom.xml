@@ -14,7 +14,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
+     <dependency>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-compiler-plugin</artifactId>
+	  <version>3.10.0</version>
+	  <type>maven-plugin</type>
+      </dependency>
       </dependencies>
   <build>
 <plugins>
@@ -50,12 +55,7 @@
                 <target>1.8</target>
             </configuration>
         </plugin>-->
-	<dependency>
-	  <groupId>org.apache.maven.plugins</groupId>
-	  <artifactId>maven-compiler-plugin</artifactId>
-	  <version>3.10.0</version>
-	  <type>maven-plugin</type>
-</dependency>
+	
 
 </plugins>
 <finalName>maven-tomcat</finalName>
