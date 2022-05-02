@@ -55,8 +55,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-           username: $env.SA_CLIENT_ID
-           password: $env. SA_CLIENT_SECRET
+           username: ${{env.SA_CLIENT_ID}}
+           password: ${{env. SA_CLIENT_SECRET}}
       -
         name: Docker push
         run: |
