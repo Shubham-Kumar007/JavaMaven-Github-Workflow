@@ -9,9 +9,9 @@ on:
   
   repository_dispatch:
     type: [build]
-env:
-    SA_CLIENT_ID: ${{ secrets.DOCKERHUB_USERNAME }}
-    SA_CLIENT_SECRET: ${{ secrets.DOCKERHUB_PASSWORD }}    
+# env:
+#     SA_CLIENT_ID: ${{ secrets.DOCKERHUB_USERNAME }}
+#     SA_CLIENT_SECRET: ${{ secrets.DOCKERHUB_PASSWORD }}    
 jobs:
   build:
 
@@ -36,7 +36,9 @@ jobs:
   docker:
     needs: build
     runs-on: ubuntu-latest
-    
+    env:
+      SA_CLIENT_ID: ${{ secrets.DOCKERHUB_USERNAME }}
+      SA_CLIENT_SECRET: ${{ secrets.DOCKERHUB_PASSWORD }}
     steps:
       -
         name: Checkout
